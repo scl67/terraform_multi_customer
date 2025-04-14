@@ -1,0 +1,16 @@
+profile  = "example-prod"
+db_name  = "exampledb"
+username = "example_dba"
+instance_class = "db.t3.large"
+engine = "postgres"
+engine_version = "16.8"
+storage = 100
+ingress_rules = [
+  {
+    description = "Production ingress rule"
+    from_port   = 5432
+    to_port     = 5432
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.0.27/32"]
+  }
+]
