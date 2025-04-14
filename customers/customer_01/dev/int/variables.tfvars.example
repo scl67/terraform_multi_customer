@@ -1,0 +1,16 @@
+profile  = "example-dev"
+db_name  = "exampledb"
+username = "example_dba"
+instance_class = "db.t3.micro"
+engine = "postgres"
+engine_version = "17.2"
+storage = 20
+ingress_rules = [
+    {
+      description = "Example ingress rule"
+      from_port   = 5432
+      to_port     = 5432
+      protocol    = "tcp"
+      cidr_blocks = ["10.0.1.101/32"]
+    }
+  ]
