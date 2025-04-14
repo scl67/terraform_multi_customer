@@ -1,4 +1,4 @@
-**/.terraform/* 
+**/.terraform/*
 *.tfstate
 *.tfstate.*
 crash.log
@@ -12,3 +12,4 @@ override.tf.json
 .terraform.tfstate.lock.info
 *tfplan*
 terraform.rc
+.DS_Store
