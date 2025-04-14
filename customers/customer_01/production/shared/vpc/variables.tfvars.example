@@ -1,0 +1,48 @@
+profile    = "customer1-prod"
+cidr_block = "10.0.0.0/16"
+main_subnets = [
+  {
+    name              = "main-prod-1"
+    cidr_block        = "10.0.0.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-1a"
+  },
+  {
+    name              = "main-prod-2"
+    cidr_block        = "10.0.64.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-1b"
+  },
+  {
+    name              = "main-prod-3"
+    cidr_block        = "10.0.128.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-1c"
+  },
+]
+dr_subnets = [
+  {
+    name              = "dr-prod-1"
+    cidr_block        = "10.0.192.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-2a"
+  },
+  {
+    name              = "dr-prod-2"
+    cidr_block        = "10.0.128.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-2b"
+  },
+  {
+    name              = "dr-prod-3"
+    cidr_block        = "10.0.64.0/18"
+    environment       = "prod"
+    availability_zone = "eu-west-2c"
+  },
+]
+vpc_tags = {
+  Name = "customer1-prod-vpc"
+}
+subnet_tags = {
+  Name = "customer1-prod-subnet"
+}
