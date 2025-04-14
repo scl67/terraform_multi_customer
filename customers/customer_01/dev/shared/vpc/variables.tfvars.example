@@ -1,0 +1,63 @@
+profile      = "customer1-dev"
+cicidr_block = "10.0.0.0/16"
+main_subnets = [
+  {
+    name              = "main-int-1"
+    cidr_block        = "10.0.1.0/25"
+    environment       = "int"
+    availability_zone = "eu-west-1a"
+  },
+  {
+    name              = "main-int-2"
+    cidr_block        = "10.0.1.128/25"
+    environment       = "int"
+    availability_zone = "eu-west-1b"
+  },
+  {
+    name              = "main-test-1"
+    cidr_block        = "10.0.2.0/25"
+    environment       = "test"
+    availability_zone = "eu-west-1a"
+  },
+  {
+    name              = "main-test-2"
+    cidr_block        = "10.0.2.128/25"
+    environment       = "test"
+    availability_zone = "eu-west-1b"
+  }
+]
+
+dr_subnets = [
+  {
+    name              = "dr-int-1"
+    cidr_block        = "10.0.3.0/25"
+    environment       = "int"
+    availability_zone = "eu-west-2a"
+  },
+  {
+    name              = "dr-int-2"
+    cidr_block        = "10.0.3.128/25"
+    environment       = "int"
+    availability_zone = "eu-west-2b"
+  },
+  {
+    name              = "dr-test-1"
+    cidr_block        = "10.0.4.0/25"
+    environment       = "test"
+    availability_zone = "eu-west-2a"
+  },
+  {
+    name              = "dr-test-2"
+    cidr_block        = "10.0.4.128/25"
+    environment       = "test"
+    availability_zone = "eu-west-2b"
+  }
+]
+
+vpc_tags = {
+  Name        = "customer1-dev-vpc"
+}
+
+subnet_tags = {
+  Name        = "customer1-dev-subnet"
+}
