@@ -14,44 +14,32 @@ main_subnets = [
     availability_zone = "eu-west-1b"
   },
   {
-    name              = "main-test-1"
+    name              = "main-staging-1"
     cidr_block        = "10.0.2.0/25"
-    environment       = "test"
+    environment       = "staging"
     availability_zone = "eu-west-1a"
   },
   {
-    name              = "main-test-2"
+    name              = "main-staging-2"
     cidr_block        = "10.0.2.128/25"
-    environment       = "test"
+    environment       = "staging"
     availability_zone = "eu-west-1b"
   }
 ]
 
 dr_subnets = [
   {
-    name              = "dr-int-1"
+    name              = "dr-staging-1"
     cidr_block        = "10.0.3.0/25"
-    environment       = "int"
+    environment       = "staging"
     availability_zone = "eu-west-2a"
   },
   {
-    name              = "dr-int-2"
+    name              = "dr-staging-2"
     cidr_block        = "10.0.3.128/25"
-    environment       = "int"
+    environment       = "staging"
     availability_zone = "eu-west-2b"
   },
-  {
-    name              = "dr-test-1"
-    cidr_block        = "10.0.4.0/25"
-    environment       = "test"
-    availability_zone = "eu-west-2a"
-  },
-  {
-    name              = "dr-test-2"
-    cidr_block        = "10.0.4.128/25"
-    environment       = "test"
-    availability_zone = "eu-west-2b"
-  }
 ]
 
 vpc_tags = {

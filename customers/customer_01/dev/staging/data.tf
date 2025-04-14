@@ -13,7 +13,7 @@ data "aws_subnets" "main_subnets" {
   }
   filter {
     name   = "tag:environment"
-    values = ["test"]
+    values = ["stage"]
   }
 }
 
@@ -32,6 +32,6 @@ data "aws_subnets" "dr_subnets" {
   }
   filter {
     name   = "tag:environment"
-    values = ["test"]
+    values = ["stage"]
   }
 }

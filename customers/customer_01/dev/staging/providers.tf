@@ -12,7 +12,7 @@ provider "aws" {
       region      = "eu-west-1"
       provisioner = "terraform"
       account     = "dev"
-      environment = "test"
+      environment = "staging"
       Owner       = "customer1"
     }
   }
@@ -28,7 +28,7 @@ provider "aws" {
       region      = "eu-west-2"
       provisioner = "terraform"
       account     = "dev"
-      environment = "test"
+      environment = "staging"
       Owner       = "customer1"
     }
   }
